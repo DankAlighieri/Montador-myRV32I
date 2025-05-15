@@ -67,4 +67,3 @@ int encontrarRotulos(char *nomeArquivo) {
     salvarEnderecos(rotulos, indiceDoRotulo);
     return 0;   
 }
-
