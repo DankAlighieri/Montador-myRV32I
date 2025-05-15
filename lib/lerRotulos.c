@@ -22,6 +22,9 @@ int encontrarRotulos(char *nomeArquivo) {
         if (len > 0 && buffer[len-2] == ':') {
             rotulo rotulo;
             printf("Rotulo encontrado: %s\n", buffer);
+            
+            buffer[len - 2] = '\0';
+            
             strcpy(rotulo.nome, buffer);
             rotulo.enderecoMemoria = enderecoMemoriaAtual;
             rotulos[indiceDoRotulo] = rotulo;
@@ -30,6 +33,11 @@ int encontrarRotulos(char *nomeArquivo) {
             enderecoMemoriaAtual += 4;
         }
     }
+
+    for (int i = 0; i < indiceDoRotulo; i++) {
+        printf("Rotulo: %s, Endereco: %d\n", rotulos[i].nome, rotulos[i].enderecoMemoria);
+    }
+
     fclose(arquivo);
     return 0;   
 }
