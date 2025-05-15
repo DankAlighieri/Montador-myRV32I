@@ -9,6 +9,5 @@ int main() {
     //scanf("%249s", nomeArquivo);
     encontrarRotulos(nomeArquivo);
 
-    
     return 0;
 }

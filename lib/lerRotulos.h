@@ -1,7 +1,9 @@
+#include <stdint.h>
 typedef struct {
     char nome[250];
-    int enderecoMemoria;
+    char enderecoMemoria[33];  // 32 bits + null terminator
+    int enderecoMemoriaInt;
 } rotulo;
 
 int encontrarRotulos(char *nomeArquivo);
-unsigned int transforma_em_bin(int endereco);
+void transforma_em_bin(int endereco, char *bin);
