@@ -41,3 +41,20 @@ int encontrarRotulos(char *nomeArquivo) {
     fclose(arquivo);
     return 0;   
 }
+unsigned int transforma_em_bin(int endereco) {
+    unsigned int binario = 0;
+    unsigned int mascara = 1;
+    unsigned int resultado = 0;
+    int posicao = 0;
+
+    // Converte o endereço para binário no formato de 32 bits
+    while (endereco > 0) {
+        if (endereco & mascara) {
+            resultado |= (1 << posicao);
+        }
+        endereco >>= 1;
+        posicao++;
+    }
+
+    return resultado;
+}

@@ -4,3 +4,4 @@ typedef struct {
 } rotulo;
 
 int encontrarRotulos(char *nomeArquivo);
+unsigned int transforma_em_bin(int endereco);
