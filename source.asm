@@ -6,5 +6,5 @@ loop:
     beq t0, t1, exit
     jal loop  
 exit:
-    addi a7, 10
+    addi a7, zero, 10
     ecall
