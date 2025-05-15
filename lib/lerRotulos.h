@@ -1,0 +1,1 @@
+int encontrarRotulos(char *nomeArquivo);
